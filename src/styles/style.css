@@ -1,0 +1,32 @@
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	background: url("../assets/3299_4.jpg") no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+  	align-items: center;
+}
+
+#flipbook{
+	/* margin: 0 auto; */
+}
+
+#flipbook .turn-page{
+	background-color:#ccc;
+	background-size:100% 100%;
+}
+
+.cover {
+	background: url("../assets/covertest.jpg") no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
