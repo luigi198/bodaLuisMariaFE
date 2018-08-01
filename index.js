@@ -2,6 +2,11 @@ var typingMethod;
 
 $(document).ready(function () {
 
+	window.addEventListener("resize", function() {
+		// $("#flipbook").width('80%');
+		// $("#flipbook").height('90%');
+	});
+
 	var getWidthPercentage = function () {
 		return $(document).width() * 0.6;
 	};
@@ -15,6 +20,8 @@ $(document).ready(function () {
 	$("#flipbook").turn({
 		width: getWidthPercentage(),
 		height: getHeigthPercentage(),
+		autoCenter: true,
+		gradients: true,
 		display: 'double',
 		acceleration: true,
 		elevation: 50
@@ -33,6 +40,20 @@ $(document).ready(function () {
 			}
 		}
 	});
+
+	var setGuestId = function () {
+		var urlSplit = window.location.search.split('name=');
+		var name = '';
+
+		if (urlSplit.length !== 2) {
+			return;
+		}
+
+		name = decodeURI(urlSplit[1]);
+		$('#guestNameId').text(name);
+	};
+
+	setGuestId();
 
 });
 
